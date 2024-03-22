@@ -7,7 +7,7 @@ services:
       context: ./services/server
       dockerfile: Dockerfile
     ports:
-      - 5001:5000
+        - 52348:5000
     environment:
       - FLASK_ENV=development
       - APP_SETTINGS=project.config.DevelopmentConfig
@@ -31,6 +31,6 @@ services:
       context: ./services/client
       dockerfile: Dockerfile
     ports:
-      - 8080:8080
+        - 26934:8080
     depends_on:
       - server
